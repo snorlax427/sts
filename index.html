@@ -1,0 +1,221 @@
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project RENEW</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#116530',
+            secondary: '#28a745',
+            light: '#f4fff6',
+          },
+          fontFamily: {
+            sans: ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+      opacity: 0.85;
+    }
+
+    .hero-bg {
+      background: url('17473958') center/cover no-repeat;
+      position: relative;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+    }
+
+    .highlight {
+      color: #28a745;
+      font-weight: 600;
+    }
+
+    .btn {
+      background-color: #116530;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #28a745;
+    }
+
+    footer .container {
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5rem;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-light">
+
+<!-- Navbar -->
+<header class="bg-primary shadow-lg">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4 text-white">
+    <div class="text-3xl font-bold">Project <span class="text-yellow-300">RENEW</span></div>
+    <nav class="space-x-4">
+      <a href="#" class="hover:text-yellow-300">Home</a>
+      <a href="#schedule" class="hover:text-yellow-300">Schedule</a>
+      <a href="#learn" class="hover:text-yellow-300">Learn</a>
+      <a href="#articles" class="hover:text-yellow-300">Articles</a>
+      <a href="#updates" class="hover:text-yellow-300">Updates</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-bg">
+  <div class="hero-content px-6 lg:px-20 max-w-4xl">
+    <img src="FB_IMG_1747395822248.png" 
+         alt="Barangay Munlawin Norte Logo" 
+         class="mx-auto mb-6 w-28 h-auto rounded-full shadow-lg border-4 border-white">
+    <h1 class="text-4xl lg:text-6xl font-bold mb-6">Cleaner, Greener, Healthier Community</h1>
+    <p class="text-lg lg:text-xl">Join us in building a sustainable future in Barangay Munlawin Norte through smart waste management and educational campaigns.</p>
+  </div>
+</section>
+
+<!-- Waste Collection Schedule -->
+<section id="schedule" class="py-16 bg-white">
+  <div class="section-content px-6">
+    <h2 class="text-4xl font-bold text-primary text-center mb-12">Waste Collection Schedule</h2>
+    <div class="bg-green-50 p-6 rounded-lg shadow-md mb-8">
+      <label for="purok" class="block text-lg font-semibold mb-2">Select your Purok:</label>
+      <select id="purok" class="w-full p-3 border border-gray-300 rounded-lg">
+        <option>-- Choose Purok --</option>
+        <option>Purok 1</option>
+        <option>Purok 2</option>
+        <option>Purok 3</option>
+        <option>Purok 4</option>
+        <option>Purok 5</option>
+        <option>Purok 6</option>
+      </select>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold">Composting Drop-off</h3>
+        <p>Saturdays, 9 AM - 12 PM at Barangay Hall</p>
+      </div>
+      <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold">Bulky Waste Collection</h3>
+        <p>Last Friday of every month</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Educational Campaigns -->
+<section id="learn" class="py-16 bg-gradient-to-r from-green-100 via-white to-green-50">
+  <div class="section-content px-6">
+    <h2 class="text-4xl font-bold text-primary text-center mb-12">Educational Campaigns</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="1674737092447.jfif" class="rounded mb-4 w-full h-48 object-cover" alt="Waste Segregation">
+        <h3 class="text-lg font-semibold mb-2">Proper Waste Segregation</h3>
+        <p class="mb-3">Learn how proper segregation boosts recycling.</p>
+        <a href="#" class="text-primary font-semibold underline">Read More</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=800&q=60" class="rounded mb-4 w-full h-48 object-cover" alt="Composting">
+        <h3 class="text-lg font-semibold mb-2">Composting at Home</h3>
+        <p class="mb-3">Discover the benefits of home composting.</p>
+        <a href="#" class="text-primary font-semibold underline">Read More</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="turtle.png" class="rounded mb-4 w-full h-48 object-cover" alt="Plastic Reduction">
+        <h3 class="text-lg font-semibold mb-2">Reducing Plastic Use</h3>
+        <p class="mb-3">Tips to reduce daily plastic waste.</p>
+        <a href="#" class="text-primary font-semibold underline">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Articles -->
+<section id="articles" class="py-16 bg-white">
+  <div class="section-content px-6">
+    <h2 class="text-4xl font-bold text-primary text-center mb-12">Waste Management Articles</h2>
+    <input type="text" placeholder="Search articles..." class="w-full p-3 mb-6 border border-gray-300 rounded-lg" />
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md">
+        <h3 class="text-lg font-semibold mb-2">The Importance of Proper Waste Disposal</h3>
+        <p class="text-sm mb-3">How improper disposal affects health and the environment.</p>
+        <a href="#" class="text-primary font-semibold">Learn more</a>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md">
+        <h3 class="text-lg font-semibold mb-2">Composting Basics for Beginners</h3>
+        <p class="text-sm mb-3">Step-by-step guide to turn scraps into rich soil.</p>
+        <a href="#" class="text-primary font-semibold">Learn more</a>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md">
+        <h3 class="text-lg font-semibold mb-2">Zero Waste Lifestyle</h3>
+        <p class="text-sm mb-3">Simple lifestyle changes for sustainability.</p>
+        <a href="#" class="text-primary font-semibold">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Updates -->
+<section id="updates" class="py-16 bg-green-50">
+  <div class="section-content px-6">
+    <h2 class="text-4xl font-bold text-primary text-center mb-12">Latest Updates</h2>
+    <div class="space-y-6">
+      <div class="bg-white p-5 rounded-lg shadow">📢 Barangay Munlawin Norte launches new waste segregation guidelines effective May 2024.</div>
+      <div class="bg-white p-5 rounded-lg shadow">♻️ Government program increases recycling assistance coverage starting June.</div>
+      <div class="bg-white p-5 rounded-lg shadow">🌿 Community clean-up drive set for July 15 — volunteers welcome!</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-6 mt-12">
+  <div class="container mx-auto text-center text-sm">
+    &copy; 2024 Project RENEW, Barangay Munlawin Norte | Empowering a Sustainable Future
+  </div>
+</footer>
+
+</body>
+</html>
